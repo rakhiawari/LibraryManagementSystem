@@ -1,4 +1,3 @@
-/*
 package LibraryManagement;
 
 import LibraryManagement.controller.LibraryController;
@@ -8,7 +7,7 @@ import LibraryManagement.model.Book;
 import java.util.Scanner;
 import java.util.UUID;
 
-public class UserMain {
+public class UserInput {
 
     public static void main(String[] args) {
 
@@ -23,83 +22,50 @@ public class UserMain {
             switch (choice) {
                 case 1:
                     System.out.println("Enter book name:");
-//                    scanner.nextLine();
+                    scanner.nextLine();
                     String bookName = scanner.nextLine();
-
                     System.out.println("Enter author name");
                     tempName = scanner.nextLine();
                     Author authorName = new Author(tempName);
                     System.out.println("Enter book quantity");
                     int bookQuantity = scanner.nextInt();
-
                     String uniqueID = UUID.randomUUID().toString();
-                    Book book = new Book(uniqueID, bookName, authorName, bookQuantity);
-
-                    libraryController.addBook(book);
+                    Book book = new Book(uniqueID, bookName, authorName);
+                    libraryController.addBook(book, bookQuantity);
                     break;
                 case 2:
-
-
-                    libraryController.viewBooks();
+                    libraryController.viewBooks().stream().forEach(e -> System.out.println(e));
                     break;
                 case 3:
                     System.out.println("Enter Author name: ");
                     scanner.nextLine();
                     tempName = scanner.nextLine();
                     authorName = new Author(tempName);
-                    libraryController.searchBookByCategory(authorName);
+                    libraryController.searchBookByCategory(authorName).stream().forEach(e -> System.out.println(e));
                     break;
                 case 4:
-                    System.out.println("Enter book title: ");
-                    scanner.nextLine();
-                    bookName = scanner.nextLine();
-//                    libraryController.viewBooksByBookTitle(bookName);
-                    break;
-                case 5:
-                    System.out.println("Enter Author name: ");
-                    scanner.nextLine();
-                    tempName = scanner.nextLine();
-                    authorName = new Author(tempName);
-                    librarycontroller.viewBooksByAuthorName(authorName);
-                    break;
-                case 6:
-                    System.out.println("Enter book title: ");
-                    scanner.nextLine();
-                    bookName = scanner.nextLine();
-                    librarycontroller.viewBooksByBookTitle(bookName);
-                    break;
-                case 7:
                     System.out.println("Enter book name: ");
                     scanner.nextLine();
                     bookName = scanner.nextLine();
                     System.out.println("Enter customer name: ");
                     String custName = scanner.nextLine();
-
-                    librarycontroller.issueBooks(bookName, custName);
+                    libraryController.issueBooks(bookName, custName);
                     break;
-                case 8:
-                    librarycontroller.viewIssuedBooks();
+                case 5:
+                    libraryController.viewIssuedBooks().forEach((k, v) -> System.out.println((k + ":" + v)));
                     break;
-                case 9:
+                case 6:
                     System.out.println("Enter book name to be deleted: ");
-                    bookName = scanner.nextLine();
-                    librarycontroller.deleteBook(bookName);
-                    break;
-                case 10:
-                    System.out.println("Enter customer name:");
                     scanner.nextLine();
-                    custName = scanner.nextLine();
-                    System.out.println("Enter book name:");
                     bookName = scanner.nextLine();
-                    librarycontroller.returnBook(custName, bookName);
+                    libraryController.deleteBook(bookName);
                     break;
-                case 0:
+                case 7:
                     break;
                 default:
                     System.out.println("INVALID choice.");
             }
-        } while (choice != 0);
+        } while (choice != 7);
 
     }
 }
-*/

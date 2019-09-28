@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26f91033-d055-48bf-99ce-cc594c960c49" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/LibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/LibraryTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/UserList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/controller/LibraryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/model/IssueBooks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/LibraryTester.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/service/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/service/Library.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/LibraryTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/UserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/UserInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LibraryManagement/service/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/service/Library.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,13 +46,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LibraryTester">
+  <component name="RunManager" selected="Application.UserInput">
     <configuration name="LibraryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryManagement.LibraryTester" />
       <module name="librarymanagementsystem" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="LibraryManagement.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserInput" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LibraryManagement.UserInput" />
+      <module name="librarymanagementsystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LibraryManagement.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,6 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserInput" />
         <item itemvalue="Application.LibraryTester" />
         <item itemvalue="Application.multiplevalues" />
       </list>

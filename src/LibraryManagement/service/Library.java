@@ -8,13 +8,13 @@ import java.util.*;
 
 public class Library {
     List<BookQuantity> bookList;
+    //    List<Book> issuedBookList;
     Map<String, List<Book>> userList;
-    List<Book> issuedBookList;
     static Library library = null;
 
     private Library() {
         bookList = new LinkedList<>();
-        issuedBookList = new ArrayList<>();
+//        issuedBookList = new ArrayList<>();
         userList = new HashMap<>();
     }
 
@@ -24,6 +24,7 @@ public class Library {
         }
         return library;
     }
+
     //Adds books to the library using Linked List
     public void addBook(Book book, int bookQuantity) {
         boolean flag = false;
@@ -38,6 +39,7 @@ public class Library {
             bookList.add(new BookQuantity(book, bookQuantity));
         }
     }
+
     //Shows books present in the library
     public List<BookQuantity> viewBooks() {
         return bookList;
@@ -52,6 +54,7 @@ public class Library {
         }
         return categoryList;
     }
+
     //deletes books from library
     public void deleteBook(String bookName) {
         for (int i = 0; i < bookList.size(); i++) {
@@ -60,14 +63,22 @@ public class Library {
             }
         }
     }
+
     //issues books to the customer
     public void issueBooks(String bookName, String custName) {
-
+        List<Book> issuedBookList = new ArrayList<>();
         for (BookQuantity e : bookList) {
             if (e.getBook().getBookName().equals(bookName)) {
                 if (e.getBookQuantity() >= 1) {
                     issuedBookList.add(e.getBook());
-                    userList.put(custName, issuedBookList);
+                    Set<Book> tempList = new HashSet<>(userList.get(custName) != null ? userList.get(custName) :
+                            new ArrayList<>());
+                    if (tempList != null && tempList.size() > 0) {
+                        tempList.addAll(issuedBookList);
+                        userList.put(custName, new ArrayList<>(tempList));
+                    } else {
+                        userList.put(custName, issuedBookList);
+                    }
                     e.setBookQuantity(e.getBookQuantity() - 1);
                     return;
                 } else {
@@ -77,6 +88,7 @@ public class Library {
         }
         System.out.println("Book not available!");
     }
+
     //shows books issued to customers
     public Map<String, List<Book>> viewIssuedBooks() {
         return userList;
