@@ -8,23 +8,19 @@ import java.util.*;
 
 public class Library {
     List<BookQuantity> bookList;
-    //    List<Book> issuedBookList;
     Map<String, List<Book>> userList;
     static Library library = null;
 
     private Library() {
         bookList = new LinkedList<>();
-//        issuedBookList = new ArrayList<>();
         userList = new HashMap<>();
     }
-
     public static Library getInstance() {
         if (library == null) {
             library = new Library();
         }
         return library;
     }
-
     //Adds books to the library using Linked List
     public void addBook(Book book, int bookQuantity) {
         boolean flag = false;
@@ -39,12 +35,11 @@ public class Library {
             bookList.add(new BookQuantity(book, bookQuantity));
         }
     }
-
     //Shows books present in the library
     public List<BookQuantity> viewBooks() {
         return bookList;
     }
-
+    //searches books by author name
     public List<BookQuantity> searchBookByCategory(Author author) {
         List<BookQuantity> categoryList = new LinkedList<>();
         for (BookQuantity e : bookList) {
@@ -54,7 +49,6 @@ public class Library {
         }
         return categoryList;
     }
-
     //deletes books from library
     public void deleteBook(String bookName) {
         for (int i = 0; i < bookList.size(); i++) {
@@ -63,7 +57,6 @@ public class Library {
             }
         }
     }
-
     //issues books to the customer
     public void issueBooks(String bookName, String custName) {
         List<Book> issuedBookList = new ArrayList<>();
@@ -88,7 +81,6 @@ public class Library {
         }
         System.out.println("Book not available!");
     }
-
     //shows books issued to customers
     public Map<String, List<Book>> viewIssuedBooks() {
         return userList;
