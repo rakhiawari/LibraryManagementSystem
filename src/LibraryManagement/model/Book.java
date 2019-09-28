@@ -5,6 +5,7 @@ import LibraryManagement.model.Author;
 public class Book {
     private String uniqueID, bookName;
     private Author authorName;
+
     public Book(String uniqueID, String bookName, Author authorName) {
         this.uniqueID = uniqueID;
         this.bookName = bookName;
@@ -17,7 +18,7 @@ public class Book {
         return "Book{" +
                 "uniqueID='" + uniqueID + '\'' +
                 ", bookName='" + bookName + '\'' +
-                ", authorName=" + authorName ;
+                ", authorName=" + authorName;
     }
 
     public String getBookName() {

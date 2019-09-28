@@ -13,6 +13,6 @@ public class Author {
 
     @Override
     public String toString() {
-        return "" + authorName ;
+        return "" + authorName;
     }
 }

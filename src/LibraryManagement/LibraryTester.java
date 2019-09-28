@@ -15,7 +15,6 @@ public class LibraryTester {
         Book book1=new Book("111","The Alchemist",authorName);
         librarycontroller.addBook(book1,bookQuantity);
 
-//        Brian Evenson
         bookQuantity=4;
         authorName=new Author("Paulo Coelho");
         Book book2=new Book("112","Windeye",authorName);
@@ -64,7 +63,6 @@ public class LibraryTester {
         System.out.println();
 
         System.out.println("View Issued Books.");
-//        librarycontroller.viewIssuedBooks().stream().forEach(e-> System.out.println(e));
         librarycontroller.viewIssuedBooks().forEach((k, v) -> System.out.println((k + ":" + v)));
         System.out.println();
 
@@ -75,7 +73,6 @@ public class LibraryTester {
         System.out.println("View Issued Books.");
         librarycontroller.viewIssuedBooks().forEach((k, v) -> System.out.println((k + ":" + v)));
         System.out.println();
-
 
         librarycontroller.viewBooks().stream().forEach(e -> System.out.println(e));
         System.out.println();
