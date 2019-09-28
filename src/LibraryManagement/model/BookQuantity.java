@@ -1,4 +1,6 @@
-package LibraryManagement;
+package LibraryManagement.model;
+
+import LibraryManagement.model.Book;
 
 public class BookQuantity {
     private Book book;

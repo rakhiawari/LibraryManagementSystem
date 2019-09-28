@@ -1,14 +1,34 @@
-package LibraryManagement;
+package LibraryManagement.service;
+
+import LibraryManagement.UserList;
+import LibraryManagement.model.Author;
+import LibraryManagement.model.Book;
+import LibraryManagement.model.BookQuantity;
+import LibraryManagement.model.IssueBooks;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class LibraryService implements Library{
-    List<BookQuantity> bookList = new LinkedList<>();
-    List<IssueBooks> issueBooksList = new LinkedList<>();
-    List<IssueBooks> returnBooksList = new LinkedList<>();
-    Scanner scanner = new Scanner(System.in);
+public class Library {
+    List<BookQuantity> bookList ;
+    List<IssueBooks> issueBooksList;
+    Map<String,List<Book>> userList;
+    List<Book> issuedBookList1;
+    static Library library =null;
+    private Library(){
+        bookList=new LinkedList<>();
+//        issueBooksList=new LinkedList<>();
+        issuedBookList1=new ArrayList<>();
+        userList=new HashMap<>();
+    }
+
+    public  static Library getInstance() {
+        if (library ==null) {
+            library =new Library();
+        }
+        return library;
+    }
 
     public void addBook(Book book, int bookQuantity) {
         boolean flag=false;
@@ -48,15 +68,20 @@ public class LibraryService implements Library{
     }
 
     public void issueBooks(String bookName, String custName) {
+
         for (BookQuantity e: bookList) {
             if (e.getBook().getBookName().equals(bookName)) {
                 if (e.getBookQuantity() >= 1) {
-                    String uniqueID = UUID.randomUUID().toString();
+                    /*String uniqueID = UUID.randomUUID().toString();
                     DateFormat df = new SimpleDateFormat("dd/MM/yy");
                     Date dateobj = new Date();
-                    String dateOfIssue = df.format(dateobj);
-                    IssueBooks thisBook = new IssueBooks(uniqueID, bookName, custName, dateOfIssue);
-                    issueBooksList.add(thisBook);
+                    String dateOfIssue = df.format(dateobj);*/
+
+                    issuedBookList1.add(e.getBook());
+                    userList.put(custName,issuedBookList1);
+
+                   /* IssueBooks thisBook = new IssueBooks(uniqueID, bookName, custName, dateOfIssue);
+                    issueBooksList.add(thisBook);*/
                     e.setBookQuantity(e.getBookQuantity()-1);
                     return;
                 }
@@ -68,8 +93,12 @@ public class LibraryService implements Library{
         System.out.println("Book not available!");
     }
 
-    public List<IssueBooks> viewIssuedBooks() {
+    /*public List<IssueBooks> viewIssuedBooks() {
         return issueBooksList;
+    }*/
+
+    public Map<String,List<Book>> viewIssuedBooks() {
+        return userList;
     }
 }
 

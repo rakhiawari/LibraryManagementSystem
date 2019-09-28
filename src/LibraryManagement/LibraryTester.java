@@ -1,5 +1,9 @@
 package LibraryManagement;
 
+import LibraryManagement.controller.LibraryController;
+import LibraryManagement.model.Author;
+import LibraryManagement.model.Book;
+
 public class LibraryTester {
 
     public static void main(String[] args) {
@@ -47,27 +51,34 @@ public class LibraryTester {
         librarycontroller.searchBookByCategory(authorName).stream().forEach(e -> System.out.println(e));
         System.out.println();
 
-        System.out.println("Deleting book James Joyce: ");
-        librarycontroller.deleteBook("James Joyce");
+        System.out.println("Deleting book The Dead: ");
+        librarycontroller.deleteBook("The Dead");
         System.out.println();
 
         System.out.println("after deleting");
         librarycontroller.viewBooks().stream().forEach(e -> System.out.println(e));
         System.out.println();
 
-        System.out.println("issue Books: The Dead, John Green ");
-        librarycontroller.issueBooks("The Dead","John Green");
+        System.out.println("issue Books: War & Peace, John Green ");
+        librarycontroller.issueBooks("War & Peace","John Green");
         System.out.println();
 
         System.out.println("View Issued Books.");
-        librarycontroller.viewIssuedBooks().stream().forEach(e-> System.out.println(e));
+//        librarycontroller.viewIssuedBooks().stream().forEach(e-> System.out.println(e));
+        librarycontroller.viewIssuedBooks().forEach((k, v) -> System.out.println((k + ":" + v)));
         System.out.println();
+
+        System.out.println("issue Books: Salman Rushdie, John Green ");
+        librarycontroller.issueBooks("Salman Rushdie","John Green");
+        System.out.println();
+
+        System.out.println("View Issued Books.");
+        librarycontroller.viewIssuedBooks().forEach((k, v) -> System.out.println((k + ":" + v)));
+        System.out.println();
+
 
         librarycontroller.viewBooks().stream().forEach(e -> System.out.println(e));
         System.out.println();
 
-       /* System.out.println("issue Books: The Dead, Ari ");
-        librarycontroller.issueBooks("The Dead","Ari");
-        System.out.println();*/
     }
 }

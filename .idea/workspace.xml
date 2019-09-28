@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="26f91033-d055-48bf-99ce-cc594c960c49" name="Default Changelist" comment="" />
+    <list default="true" id="26f91033-d055-48bf-99ce-cc594c960c49" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibraryManagement/UserList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LibraryManagement/multiplevalues.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/Author.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/Book.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/BookQuantity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/IssueBooks.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/Library.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/LibraryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/LibraryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/LibraryTester.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/LibraryTester.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/Author.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/BookQuantity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/BookQuantity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/IssueBooks.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/IssueBooks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/Library.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/controller/LibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/LibraryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/service/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/LibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/LibraryTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/UserMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/UserMain.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +38,13 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1RQB7mCo7qYeBeja0o0sLevcfsT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -34,9 +61,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.multiplevalues">
     <configuration name="LibraryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="LibraryManagement.LibraryTester" />
+      <module name="librarymanagementsystem" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LibraryManagement.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="multiplevalues" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LibraryManagement.multiplevalues" />
       <module name="librarymanagementsystem" />
       <extension name="coverage">
         <pattern>
@@ -50,6 +90,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.multiplevalues" />
         <item itemvalue="Application.LibraryTester" />
       </list>
     </recent_temporary>
@@ -66,5 +107,18 @@
       <updated>1569589274751</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

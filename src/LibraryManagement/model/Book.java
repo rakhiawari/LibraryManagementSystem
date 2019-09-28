@@ -1,4 +1,6 @@
-package LibraryManagement;
+package LibraryManagement.model;
+
+import LibraryManagement.model.Author;
 
 public class Book {
     private String uniqueID, bookName;

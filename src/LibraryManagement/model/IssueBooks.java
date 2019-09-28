@@ -1,4 +1,4 @@
-package LibraryManagement;
+package LibraryManagement.model;
 
 public class IssueBooks {
 
