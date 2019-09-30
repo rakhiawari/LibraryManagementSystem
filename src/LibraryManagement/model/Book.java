@@ -2,6 +2,8 @@ package LibraryManagement.model;
 
 import LibraryManagement.model.Author;
 
+import java.util.Objects;
+
 public class Book {
     private String uniqueID, bookName;
     private Author authorName;
@@ -19,6 +21,20 @@ public class Book {
                 "uniqueID='" + uniqueID + '\'' +
                 ", bookName='" + bookName + '\'' +
                 ", authorName=" + authorName;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book)) return false;
+        Book book = (Book) o;
+        return  Objects.equals(getBookName(), book.getBookName()) &&
+                Objects.equals(getAuthorName(), book.getAuthorName());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(uniqueID, getBookName(), getAuthorName());
     }
 
     public String getBookName() {
