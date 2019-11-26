@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="26f91033-d055-48bf-99ce-cc594c960c49" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/service/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/librarymanagementsystem/LibraryManagement/service/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/model/Author.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/Author.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/model/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/model/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/controller/LibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/controller/LibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LibraryManagement/service/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LibraryManagement/service/Library.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +30,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">

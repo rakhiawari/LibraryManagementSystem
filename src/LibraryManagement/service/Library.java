@@ -7,9 +7,9 @@ import LibraryManagement.model.BookQuantity;
 import java.util.*;
 
 public class Library {
-    List<BookQuantity> bookList;
-    Map<String, List<Book>> userList;
-    static Library library = null;
+    private List<BookQuantity> bookList;
+    private Map<String, List<Book>> userList;
+    private static Library library = null;
 
     private Library() {
         bookList = new LinkedList<>();
@@ -31,7 +31,7 @@ public class Library {
                 break;
             }
         }
-        if (flag == false) {
+        if (!flag ) {
             bookList.add(new BookQuantity(book, bookQuantity));
         }
     }

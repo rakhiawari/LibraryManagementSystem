@@ -10,7 +10,7 @@ import java.util.Map;
 
 public class LibraryController {
 
-    Library library = Library.getInstance();
+    private Library library = Library.getInstance();
 
 
     public void addBook(Book book, int bookQuantity) {
